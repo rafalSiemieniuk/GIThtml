@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    /* box-sizing: border-box; */
+  }
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+.background {
+    font-size: 25px;
+    background-image: url(./image/background.jpg); 
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    /* height: 1372px; */
+}
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 880px;
+    padding: 54px 64px 54px 89px;
+}
+.logo-top {
+    padding-left: 260px;
+    mix-blend-mode: soft-light;
+}
+.logo-bottom {
+    padding-top: 70px;
+    mix-blend-mode: soft-light;
+}
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.left-col {
+    float: left;
+    width: 380px;
+}
+.right-col {
+    float: right;
+    width: 380px;
+}
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    padding: 0 0 30px 0;
+    text-shadow: 2px 2px 2px #2b0100;
+}
+.title-two {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-shadow: 2px 2px 2px #2b0100;
+}
+.form {
+    background-color: #f4f4f4;
+    box-shadow: 0px 0px 0px 20px rgba(0,0,0,0.3); 
+    padding: 0 20px 18px 20px;
+}
+.top-space {
+    padding-top: 10px;
+    padding-bottom: 28px;
+}
+.box-form > input, select {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #c6c6c6;
+    padding: 15px 16px 14px 83px;
+    font-size: 11px;
+    color: #656565;
+    background: #f4f4f4;  
+}
+.message{
+    margin-top: 20px;
+    margin-bottom: -10px;
+    height: 230px;
+    resize: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #c6c6c6;
+    padding: 15px 16px;
+    font-size: 11px;
+    color: #656565;
+    background: #f4f4f4;  
+}
+.box-form {
+    padding-top: 20px;
+    position: relative;
+}
+.box-btn {
+    padding-top: 12px;
+}
+.border-line {
+    position: absolute;
+    top: 26px;
+    left: 0px;
+    height: 30px;
+    width: 25px;
+    border-right: 1px solid #c6c6c6;
+    padding: 3px 20px 3px 15px;
+    color: #dedede;
+    font-size: 25px;
+    text-align: center;
+    line-height: 30px;
+}
+.select-location {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+.arr::after {
+   content: '';
+   position: absolute;
+   top: 36px;
+   right: 16px;
+   pointer-events: none;
+   border-top: 8px solid #e4e4e4;
+   border-left: 8px solid transparent;
+   border-right: 8px solid transparent;
+}
+
+/* SQUARED ONE */
+.squaredOne input[type=checkbox]:not(old){
+  display: none;
+}
+.squaredOne input[type=checkbox]:not(old) + label{
+  display      : inline-block;
+  font-size    : 17px;
+  line-height  : 25px;
+  color: #656565;
+  cursor: pointer;
+}
+.squaredOne input[type=checkbox]:not(old) + label > span{
+  display          : inline-block;
+  width            : 25px;
+  height           : 25px;
+  margin-right     : 15px;
+  border           : 1px solid #c6c6c6;
+  border-radius    : 2px;
+  background       : #f4f4f4;
+  vertical-align   : bottom;
+}
+.squaredOne input[type=checkbox]:not(old):checked + label > span:before{
+  content          : '';
+  display          : block;
+  width            : 12px;
+  height           : 12px;
+  margin           : 25%;
+ 
+  border-radius    : 2px;
+  background       : rgb(153,204,102);
+  background-image :    -moz-linear-gradient(to top,#7ec31f,#a3d840);
+  background-image :     -ms-linear-gradient(to top,#7ec31f,#a3d840);
+  background-image :      -o-linear-gradient(to top,#7ec31f,#a3d840);
+  background-image : -webkit-linear-gradient(to top,#7ec31f,#a3d840);
+  background-image :         linear-gradient(to top,#7ec31f,#a3d840);
+}
+/* SQUARED TWO */
+.squaredTwo {
+    float: left;
+}
+.squaredTwo input[type=checkbox]:not(old){
+  width   : 28px;
+  margin  : 0 0 0 28px;
+  padding : 0;
+  opacity : 0;
+}
+.squaredTwo input[type=checkbox] + label{
+  display      : inline-block;
+  margin-left  : -28px;
+  padding-left : 28px;
+  background   : url('image/checks.png') no-repeat 0 0;
+  line-height  : 25px;
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  font-size: 8.5px;
+  color: #656565;
+  cursor: pointer;
+}
+.squaredTwo input[type=checkbox]:checked + label{
+  background-position : 0 -48px;
+}
+/* END SQUERE */
+.btn-big{
+    height: 46px;
+    width: 100%;
+    font-size: 24px;
+    text-shadow: 1px 1px #51850e;
+    color: white;
+    border: 1px solid #3b9a00;
+    border-radius: 1px;
+    background       : rgb(153,204,102);
+    background-image :    -moz-linear-gradient(to top,#7ec31f,#a3d840);
+    background-image :     -ms-linear-gradient(to top,#7ec31f,#a3d840);
+    background-image :      -o-linear-gradient(to top,#7ec31f,#a3d840);
+    background-image : -webkit-linear-gradient(to top,#7ec31f,#a3d840);
+    background-image :         linear-gradient(to top,#7ec31f,#a3d840);
+}
+.btn-small {
+    float: right;
+    height: 40px;
+    width: 140px;
+    font-size: 18px;
+    text-shadow: 1px 1px #51850e;
+    color: white;
+    border: 1px solid #3b9a00;
+    border-radius: 1px;
+    background       : rgb(153,204,102);
+    background-image :    -moz-linear-gradient(to top,#7ec31f,#a3d840);
+    background-image :     -ms-linear-gradient(to top,#7ec31f,#a3d840);
+    background-image :      -o-linear-gradient(to top,#7ec31f,#a3d840);
+    background-image : -webkit-linear-gradient(to top,#7ec31f,#a3d840);
+    background-image :         linear-gradient(to top,#7ec31f,#a3d840);
+}
+.btn-red {
+    float: right;
+    height: 40px;
+    width: 140px;
+    font-size: 18px;
+    text-shadow: 1px 1px #7a2f1c;
+    color: white;
+    border: 1px solid #a2202a;
+    border-radius: 1px;
+    background       : #f55869;
+}
+.align-left {
+    float: left;
+}
+.btn-big:hover, .btn-small:hover, .btn-red:hover {
+    opacity: .36;
+    cursor: pointer;
+}
