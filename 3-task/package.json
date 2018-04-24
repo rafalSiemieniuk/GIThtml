@@ -1,0 +1,20 @@
+{
+  "name": "narzedziafed",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StudentDawid/narzedziaFED.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/StudentDawid/narzedziaFED#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

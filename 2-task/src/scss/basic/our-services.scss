@@ -1,0 +1,66 @@
+.section-services {
+    background-color:#70bfff;
+    height: auto;
+    .services__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        @media (max-width: 992px) {
+            padding-top: 60px;
+            padding-bottom: 10px;
+        }
+        @media (min-width: 992px) {
+            background-image: url("/img/tomato.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    .header__text {
+        @extend .h1-normal;
+        color: #fff;
+    }
+    .services__buttons {
+        padding-top: 170px;
+        padding-bottom: 150px;
+        @media (max-width: 992px) {
+            padding-top: 0;
+            padding-bottom: 60px;
+        }
+    }
+    .btn__our-services {
+        @media (max-width: 992px) {
+            margin: 0 auto 20px auto;
+        }
+        padding: 0;
+        color: #000;
+        font-size: 20px;
+        background-color: #fff;
+        height: 100px;
+        width: 100%;
+        max-width: 400px;
+        min-height: 100%;
+        margin-bottom: 20px;
+        white-space: normal;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn__text {
+        width: 300px;
+        height: 100%;
+        padding: 0 30px;
+    }
+    .btn__icon {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid #9d9d9d;
+    }
+}
+

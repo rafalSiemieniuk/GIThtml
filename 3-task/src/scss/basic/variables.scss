@@ -1,0 +1,28 @@
+//mixin font-rwd added to only section
+@mixin font-rwd($size) {
+    font-size: $size;
+    @if $size > 30px {
+        @media (max-width: 992px) {
+            font-size: ($size * 90 / 100);
+        }
+        @media (max-width: 768px) {
+            font-size: ($size * 80 / 100);
+        }
+        @media (max-width: 576px) {
+            font-size: ($size * 70 / 100);
+        }
+    }
+}
+@mixin bubble($side-1,$side-2,$side-3) {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;             
+    #{$side-1}: 0;
+    border-#{$side-1}: 0;
+    margin-#{$side-1}: -20px;
+    border-#{$side-2}: 20px solid #f9f9f9;
+    margin-#{$side-3}: -10px;
+    #{$side-3}: 50%;
+}

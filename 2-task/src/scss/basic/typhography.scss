@@ -1,0 +1,12 @@
+.h1-normal {
+    font-size: 90px;
+    @media (max-width: 1200px) {
+        font-size: 50px;
+    }
+    @media (max-width: 992px) {
+        font-size: 60px;
+    }
+    @media (max-width: 576px) {
+        font-size: 40px;
+    }
+}

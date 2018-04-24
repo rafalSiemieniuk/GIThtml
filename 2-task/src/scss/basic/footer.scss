@@ -1,0 +1,33 @@
+.footer__cahee {
+    background-color: #262626;
+    color: #b9b9b9;
+    .cahee__row {
+        @media (max-width: 768px) {
+            padding-top: 10px;
+            padding-bottom: 8px;
+        }
+        padding-top: 30px;
+        padding-bottom: 25px;
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .cahee__col--logo {
+        text-align: center;
+        font-size: 25px;
+        font-family: "Pacifico", cursive;
+    }
+    .cahee__col--copy{
+        font-size: 16px;
+    }
+    .cahee__col--made-by{
+        @media (min-width: 768px) {
+            text-align: right;
+        }
+        font-size: 15px;
+    }
+    .made-by__love {
+        color: #ff2b58;
+    }
+    
+}

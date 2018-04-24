@@ -1,0 +1,22 @@
+.section-fresh-life {
+    background-image: url("/img/fresh-life_background.jpg");
+    background-color:#777;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 400px;
+    .fresh-life__header {
+        font-size: 60px;
+        padding-top: 35.7vh;
+    }
+    .fresh-life__text {
+        padding: 12px 0;
+        max-width: 370px; 
+    }
+    .btn__fresh-life {
+        margin-top: 12px;
+        background-color: #ff6033;
+        padding: 18px 25px 16px 25px;
+    }
+}

@@ -1,0 +1,82 @@
+.section__clients {
+    @extend .wrapper-section;
+    .clients__header { 
+        text-align: center;
+    }
+    .clients__wrapper {
+        padding-top: 50px;
+        @media (max-width: 992px) {
+            padding-top: 30px;
+        }
+        @media (max-width: 768px) {
+            padding-top: 20px;
+        }
+    }
+    .wrapper__element {
+        padding-top: 20px;
+        margin: 0 -20px;
+        display: flex;
+        align-items: center;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+    .wrapper__person {
+        height: 220px;
+        width: 220px;
+        margin: 20px;
+        border-radius: 50%;
+        background-color: #f9f9f9;
+        flex: 0 0 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .person__img {
+        height: 80%;
+        color: #f9f9f9;
+        border-radius: 50%;
+    }
+    .wrapper__bubbles {
+        flex: 0 1 auto;
+        margin: 20px;
+        padding: 40px 80px;
+        background-color: #f9f9f9;
+        position: relative;
+    }
+    @media (min-width: 769px) {
+        .item-1 {
+            order: 1;     
+        }
+        .item-2 {
+            order: 2;
+        }
+        .item-1:first-child::after {
+            @include bubble(right,left,top);
+        }
+        .item-2:first-child::after {
+            @include bubble(left,right,top);
+        }
+    }
+    @media (max-width: 768px) {
+        .wrapper__bubbles {
+            padding: 30px;
+            max-width: 300px;
+        }
+        .item-1:first-child::after {
+            @include bubble(bottom,top,left);
+        }
+        .item-2:first-child::after {
+            @include bubble(bottom,top,left);
+        }
+    }
+    .bubbles__text, .bubbles__signature {
+        line-height: 30px;
+    }
+    .bubbles__signature {
+        color: #7cc576;
+        text-align: center;
+    }
+}
+

@@ -1,0 +1,117 @@
+.footer-top {
+    background-color: #222222;
+    .footer-top__wrapper {
+    margin: 0 -25px;
+    padding: 50px 0;
+    color: #fff;
+        @media (max-width: 992px) {
+            padding: 40px 0;
+        }
+        @media (max-width: 768px) {
+            padding: 30px 0;
+        }
+        @media (max-width: 576px) {
+            padding: 20px 0;
+        }
+    }
+    .title {
+        text-align: center;
+    }
+    .col {
+        color: #ececec;
+        box-sizing: border-box;
+        padding: 10px 12px;
+        max-width: 285px;
+        margin: 0 auto;
+        @media (min-width: 577px) {
+            max-width: 380px;
+        }
+        @media (min-width: 993px) {
+                width: 33%;
+                float: left;
+                .title {
+                    text-align: left;
+                }
+        }
+        .icon {
+            width: 30px;
+            padding-right: 15px;
+            padding-top: 4px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        p {
+            line-height: 1.6;
+        }
+        span {
+            display: block;
+            font-weight: bold;
+        }
+    }
+    .element {
+        padding-top: 10px;
+        display: flex;
+    }
+    .contact__text, .posts__text, .tweets__text {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+.footer-bottom {
+    &__container {
+        padding: 24px 0;
+        @media (min-width: 769px) {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+    }
+    &__copyright {
+        flex: 0 0 33%;
+        white-space: nowrap;
+        @media (max-width: 768px) {
+            order: 1;
+            padding-top: 10px;
+        } 
+    }
+    &__text {
+        @media (max-width: 768px) {
+            text-align: center;
+        }  
+    }
+    &__icons {
+        flex: 0 0 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: 2;
+    }
+    .icon__box {
+        margin: 8px 5px;
+        background-color: #222222;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .twitter:hover {
+        background-color: #00aced;
+        cursor: pointer;
+    }
+    .facebook:hover {
+        background-color: #3b5998;
+        cursor: pointer;
+    }
+    .pinterest:hover {
+        background-color: #cb2028;
+        cursor: pointer;
+    }
+    .google:hover {
+        background-color: #da2713;
+        cursor: pointer;
+    }
+}

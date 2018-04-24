@@ -1,0 +1,37 @@
+.section__services {
+    .services__wrapper {
+        @extend .wrapper-section;
+        text-align: center;
+    }
+    .header__subtitle {
+        padding-top: 20px;
+    }
+    .services__squeres {
+        margin: 0 -12px;
+    }
+    .services__square {
+        width: 100%;
+        max-width: 297px;
+        margin: 0 auto;
+        padding: 0 12px;
+        padding-top: 40px;
+        @media (min-width: 769px) {
+            float: left;
+            max-width: 217px;
+            padding-top: 60px;
+        }
+        @media (min-width: 993px) {
+            float: left;
+            max-width: 297px;
+            padding-top: 90px;
+        }
+    }
+    .square__icon {
+        font-size: 50px;
+        padding-bottom: 40px;
+    }
+    .square__text {
+        padding-top: 20px;
+    }
+}
+

@@ -1,0 +1,28 @@
+.section-about {
+    height: auto;
+    background-color:#00bbbb;
+    .about__row {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .about__dsc {
+        display: flex;
+        align-items: center;
+        padding-left: 85px;
+        @media (max-width: 992px) {
+            padding-left: 15px;
+            text-align: center;
+        }
+    }
+    .about__image {
+        width: 100%;
+        @media (max-width: 992px) {
+            display: none;
+        }
+        filter: drop-shadow(-18.79px 6.84px 20px rgba(0, 0, 0, 0.3));        
+    }
+    .header__text {
+        @extend .h1-normal;
+        color: #fff;
+    }
+}

@@ -1,0 +1,78 @@
+.btn {
+    height: 57px;
+    width: 200px;
+    color: #fff;
+    box-shadow: 0px 2px 4px 1px rgb(128,128,128);
+    border-radius: 0px;
+    font-size: 18px;
+}
+
+.container-navbar {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+    transition: all .7s;
+}
+.navbar {
+    z-index: 99;
+    .navbar-brand {
+        font-family: "Pacifico", cursive;
+        font-size: 50px;
+    }
+    .navbar-collapse {
+        font-size: 16px;
+        justify-content: flex-end;
+    }
+    .nav-link {
+        padding: 8px;
+        display:inline;
+        font-weight: 900;
+    }
+    #active {
+        position: relative;
+        padding-right: 0;
+        padding-left: 0;
+        margin: 0 8px;
+    }
+    #active::before {
+        content: "";
+        position: absolute;
+        bottom: 32px;
+        width: 100%;
+        border-top: 3px solid #ff6033;
+        @media (max-width: 992px) {
+            bottom: 25px;
+        }
+    }
+}
+
+
+#bg_start {
+    background-color: transparent;
+    box-shadow: none;
+}
+#bg_fresh_life {
+    background-color: #fff;
+}
+#bg_about {
+    background-color: #00bbbb;
+}
+#bg_services {
+    background-color: #70bfff;
+}
+#bg_gallery {
+    background-color: #ffe92f;
+}
+#bg_subscribe {
+    background-color: #fff;
+}
+#bg_blog {
+    background-color: #b07cf7;
+}
+#bg_contact {
+    background-color: #eeeff0;
+}

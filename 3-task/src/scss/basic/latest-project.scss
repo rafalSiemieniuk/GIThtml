@@ -1,0 +1,62 @@
+.section__latest-project {
+    h2, h3 {
+        color: #000;
+    }
+    p {
+        color: #777;
+    }
+    .latest-project__header {
+        @extend .wrapper-section;
+        text-align: center;
+    }
+    .header__subtitle {
+        padding-top: 10px;
+    }
+    .latest-project__wrapper { 
+        @media (min-width: 1201px) {
+            background: #fff url(../img/ipad.png) right bottom /contain no-repeat; 
+        }      
+    }
+    .desc__wrapper {
+        max-width: 470px;
+        padding-bottom: 100px;
+        @media (max-width: 1200px) {
+            margin: 0 auto;
+        }
+        @media (max-width: 992px) {
+            padding-bottom: 80px;
+        }
+        @media (max-width: 768px) {
+            padding-bottom: 60px;
+        }
+        @media (max-width: 576px) {
+            padding-bottom: 40px;
+        }
+    }
+    .desc__ul {
+        list-style-type: none;
+    }
+    .desc__li {
+        display: flex;
+        padding-top: 15px;
+    }
+    .desc__img {
+        flex: 0 0 77px;
+    }
+    .desc__li-wrapper {
+        flex: 0 1 auto;
+        padding-left: 16px;
+    }
+    .desc__text {
+        padding: 15px 0 25px 0;
+    }
+    .desc__text--view-details {
+        color: #7cc576;
+        font-weight: bold;
+        &:hover {
+            cursor: pointer;
+            color: #000;
+        }
+    }
+}
+

@@ -1,0 +1,68 @@
+.section-blog {
+    height: auto;
+    background-color:#b07cf7;
+    color: #fff;
+    .container__blog {
+        padding-top: 90px;
+        padding-bottom: 120px;
+        @media (max-width: 992px) {
+            padding-top: 45px;
+            padding-bottom: 60px;
+        }
+    }
+    .header__text{
+        @extend .h1-normal;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .blog__text {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 17px;
+        padding: 20px 0;
+        max-width: 570px;
+    }
+    .squere {
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 57.5% 20px 4px 20px;
+        padding-top: 57.5%; 
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .blog__squere-1 {
+        background: linear-gradient(to top, #000000 0%, transparent 50%), #777 url(../img/blog-1.jpg) center /cover no-repeat;  
+    }
+    .blog__squere-2 {
+        background: linear-gradient(to top, #000000 0%, transparent 50%), #777 url(../img/blog-2.jpg) center /cover no-repeat; 
+    }
+    .blog__squere-3 {
+        background: linear-gradient(to top, #000000 0%, transparent 50%), #777 url(../img/blog-3.jpg) center /cover no-repeat; 
+    }
+    .square__date {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        border-radius: 10px;
+        background-color: rgba(60, 60, 60, 0.5);
+        padding: 6px;
+    }
+    .date__header {
+        font-size: 30px;
+        text-align: center;
+        margin: auto;
+    }
+    .squere__header {
+        font-size: 20px;
+        margin-top: auto;
+    }
+    .squere__text {
+        font-size: 13px;
+    }
+    .blog__btn {
+        background-color: #f82b3c;
+        margin: 30px auto 0 auto;
+    }
+}

@@ -1,0 +1,35 @@
+.section-gallery {
+    height: auto;
+    background-color:#ffe92f;
+    .container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        @media (max-width: 992px) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+    .dsc__wrapper {
+        width: 100%;
+    }
+    .header__text {
+        @extend .h1-normal;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .gallery__text {
+        font-size: 17px;
+        width: 100%;
+        max-width: 630px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .image {
+        padding-top: 30px;
+        width: 100%;
+    }
+    .btn__gallery {
+        margin: 30px auto 40px auto;
+        background-color: #5585a2;
+    }
+}
