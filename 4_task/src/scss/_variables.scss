@@ -1,0 +1,28 @@
+$color-header: #0d0b11;
+$color-hero-1: #161828;
+$color-hero-2: #212331;
+$color-section-1: #475a85;
+$color-section-2: #7b7b7b;
+$color-btn: #ea5b58;
+$color-font-1: #323232;
+$color-font-2: #a7a7a7;
+
+$base-font: 'Open Sans', sans-serif;
+
+$base-unit: 1rem;
+
+$body-font-size: $base-unit;
+$body-line-height: 1.5;
+
+$h1-font-size: $base-unit * 4;
+$h2-font-size: $base-unit * 2.5;
+$h3-font-size: $base-unit * 2;
+$h4-font-size: $base-unit * 1.5;
+
+$space: .8333 * $base-unit;
+
+$wrapper-max: 74 * $base-unit; //1184px
+
+$br-mobile: 576px;
+$br-tablet: 768px;
+$br-deskopt: 1200px;
