@@ -88,3 +88,8 @@ h4, .h4 {
     background-color: $color-btn;
 }
 
+.clear::before {
+    content: "";
+    display: block;
+    clear: both;
+}
