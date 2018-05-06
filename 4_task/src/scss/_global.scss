@@ -86,6 +86,7 @@ h4, .h4 {
     min-width: 155px;
     font-size: $space * 1.5;
     background-color: $color-btn;
+    cursor: pointer;
 }
 
 .clear::before {

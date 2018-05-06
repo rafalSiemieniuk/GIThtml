@@ -69,4 +69,17 @@
         font-size: $base-unit * 2.5;
     }
 
+    .browse-all {
+        margin-top: $space * 4;
+        p:nth-last-child(n+2) {
+            margin: 0;
+            font-weight: bold;
+        }
+    }
+    
+    .browse-all__icon {
+        font-size: $base-unit * 4;
+        margin: $space * -1.5 0 0 0;
+    }
+
 }
