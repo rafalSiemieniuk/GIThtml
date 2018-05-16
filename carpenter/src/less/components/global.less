@@ -1,0 +1,95 @@
+html {
+    box-sizing: border-box;
+    background-color: @color-bg-1;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 12px;
+    @media (max-width: @br-tablet) {
+        font-size: 10px;    
+    }
+    @media (max-width: @br-mobile) {
+        font-size: 8px;    
+    }
+}
+
+body {
+    font-family: @base-font;  
+    font-size: @body-font-size;
+    line-height: @body-line-height;
+    color: @color-font-2;
+    letter-spacing: 1.2px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background: none;
+    border: 0;
+    padding: 0;
+}
+
+p {
+    margin-top: @space; 
+    margin-bottom: @space; 
+}
+
+h1, .h1 {
+    font-size: @h1-font-size;
+    letter-spacing: 1.5;
+}
+h2, .h2 {
+    font-size: @h2-font-size;
+    letter-spacing: 1.5;
+    margin-bottom: @space * 6;
+    @media (max-width: @br-deskopt) {
+        margin-bottom: @space * 5;    
+    }
+    @media (max-width: @br-tablet) {
+        margin-bottom: @space * 4;    
+    }
+    @media (max-width: @br-mobile) {
+        margin-bottom: @space * 3;   
+    }
+}
+h3, .h3 {
+    font-size: @h3-font-size;
+    letter-spacing: 1.5;
+    margin-bottom: @space * 2;
+}
+
+.btn {
+    cursor: pointer;
+    padding: @space * 2 @space * 7;
+    color: @color-font-1;
+    min-width: 180px;
+    font-size: @base-unit * 1.8;
+    background-color: @color-btn-1;
+    transition: all .5s;
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
+.clear::before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.border-bottom {
+    display: inline-block;
+    border-bottom: 2px solid @color-btn-1;
+}
