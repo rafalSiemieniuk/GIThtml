@@ -1,0 +1,44 @@
+.section__touch {
+    position: relative;
+    background-color: $color-section-2;
+    text-align: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: 
+        linear-gradient(to top, 
+        transparent 2px, 
+        $color-shadow 2px, 
+        $color-shadow 4px, 
+        transparent 4px),
+
+        linear-gradient(to left, 
+        transparent 2px, 
+        $color-shadow 2px, 
+        $color-shadow 4px, 
+        transparent 4px);
+        background-size: 4px 4px;
+    }
+
+    .touch__wrapper {
+        position: relative;
+        z-index: 1;
+        padding-top: $space * 18;
+        padding-bottom: $space * 15;
+        @include max-media($br-tablet) {
+            padding-top: $space * 9;
+            padding-bottom: $space * 6;
+        }
+    }
+
+    .touch__subtitle {
+        font-size: $base-unit * 2;
+    }
+}
+

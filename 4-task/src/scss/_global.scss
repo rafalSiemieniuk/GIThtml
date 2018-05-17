@@ -1,0 +1,96 @@
+html {
+    box-sizing: border-box;
+    background-color: grey;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 12px;
+    @include max-media($br-tablet) {
+        font-size: 10px;
+}
+    @include max-media($br-mobile) {
+        font-size: 8px;
+    }
+}
+
+body {
+    font-family: $base-font;  
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background: none;
+    border: 0;
+    padding: 0;
+}
+
+p {
+    margin-top: $space; 
+    margin-bottom: $space; 
+}
+
+h1, .h1 {
+    font-size: $h1-font-size;
+    font-weight: bold;
+    letter-spacing: 0;
+    margin-bottom: $space;
+}
+h2, .h2 {
+    font-size: $h2-font-size;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+h3, .h3 {
+    font-size: $h3-font-size;
+    font-weight: bold;
+    letter-spacing: 0;
+    margin-bottom: $space;
+}
+h4, .h4 {
+    font-size: $h4-font-size;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding-left: $space;
+    padding-right: $space;
+    max-width: $wrapper-max;
+    @include max-media($br-tablet) {
+        padding-left: $space * 3;
+        padding-right: $space * 3;
+    }
+} 
+
+.btn {
+    padding: $space * 1.9 $space * 5.5 $space * 1.7 $space * 5.5;
+    border-radius: 4px;
+    color: #fff;
+    min-width: 155px;
+    font-size: $space * 1.5;
+    background-color: $color-btn;
+    cursor: pointer;
+}
+
+.clear::before {
+    content: "";
+    display: block;
+    clear: both;
+}

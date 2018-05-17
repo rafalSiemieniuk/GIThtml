@@ -1,0 +1,14 @@
+.secion__footer {
+    background-color: $color-hero-1;
+    text-align: center;
+
+    .ftr__wrapper {
+        padding: $space * 5;
+        opacity: .5;
+    }
+
+    .ftr__copyright {
+        font-size: $base-unit * 1,16;
+        padding-bottom: $space * 2;
+    }
+}

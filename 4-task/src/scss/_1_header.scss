@@ -1,0 +1,31 @@
+.main-hdr {
+    background-color: $color-header;
+
+    .wrapper {
+        padding-top: $space * 3;
+        padding-bottom: $space * 3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hdr-logo {
+        @include max-media($br-mobile) {
+            padding-left: $space * 4;
+        }
+    }
+
+    .main-nav {
+        flex: 0 0 auto;
+        @include max-media($br-mobile) {
+            padding-right: $space * 4;
+        }
+    }
+
+    li {
+        padding-left: $space * 4;
+        @include min-media($br-mobile) {
+            float: left;
+        }
+    }
+}
