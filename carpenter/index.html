@@ -12,24 +12,49 @@
 </head>
 
 <body>
-
-	<header class="header__nav header">
+	<header class="header__nav header header__nav-0">
 		<nav class="nav__container container nav">
-			<p class="nav__logo">Usługi Stolarskie</p>
-			<ul class="nav__menu clear">
-				<a href="#">
-					<li class="nav__about-us">O NAS</li>
-				</a>
-				<a href="#">
-					<li class="nav__offer">OFERTA</li>
-				</a>
-				<a href="#">
-					<li class="nav__contact">KONTAKT</li>
-				</a>
-			</ul>
+			<p class="nav__logo header__logo-0">Usługi Stolarskie</p>
+			<div class="nav__main main">
+				<ul class="main__menu clear">
+					<a href="#">
+						<li class="nav__about-us nav__li">O NAS</li>
+					</a>
+					<a href="#">
+						<li class="nav__offer">OFERTA</li>
+					</a>
+					<a href="#">
+						<li class="nav__contact">KONTAKT</li>
+					</a>
+				</ul>
+			</div>
+			<div class="nav__rwd">
+				<input id="toggle" type="checkbox">
+				<label class="rwd__hamburger" for="toggle">
+					<div class="rwd__hamburger-component rwd__top"></div>
+					<div class="rwd__hamburger-component rwd__meat"></div>
+					<div class="rwd__hamburger-component rwd__bottom"></div>
+				</label>
+				<div class="rwd__curtain-menu">
+					<ul class="rwd__menu">
+						<a href="#">
+							<li class="nav__logo nav__li">Usługi Stolarskie</li>
+						</a>
+						<a href="#">
+							<li class="nav__about-us">O NAS</li>
+						</a>
+						<a href="#">
+							<li class="nav__offer">OFERTA</li>
+						</a>
+						<a href="#">
+							<li class="nav__contact">KONTAKT</li>
+						</a>
+					</ul>
+				</div>
+			</div>
 		</nav>
 	</header>
-	<section class="section__hero section">
+	<section id="top-site" class="section__hero section">
 		<div class="hero__container container">
 			<div class="hero__wrap-logo">
 				<p class="hero__logo">
@@ -130,13 +155,22 @@
 				<div class="contact__info-details col-md-6">
 					<h3 class="contact__subtitle">Dane Kontaktowe</h3>
 					<p class="contact__my-name">
-						<i class="fas fa-user"></i><span>Paweł Sandrykowicz</span></p>
+						<i class="fas fa-user"></i>
+						<span>Paweł Sandrykowicz</span>
+					</p>
 					<p class="contact__address">
-						<i class="fas fa-phone"></i><span>530 497 408</span></p>
+						<i class="fas fa-phone"></i>
+						<span>530 497 408</span>
+					</p>
 					<p class="contact__address">
-						<i class="fas fa-map-marker"></i><span>Żurobice 76 <br> 17-306 Dziadkowice</span></p>
+						<i class="fas fa-map-marker"></i>
+						<span>Żurobice 76
+							<br> 17-306 Dziadkowice</span>
+					</p>
 					<p class="contact__address">
-						<i class="fas fa-envelope"></i><span>moj-mail@mojmail.com</span></p>
+						<i class="fas fa-envelope"></i>
+						<span>moj-mail@mojmail.com</span>
+					</p>
 				</div>
 				<form action="post" class="contact__form form col-md-6">
 					<h3 class="contact__subtitle">Formularz Kontaktowy</h3>
@@ -154,7 +188,7 @@
 							<input type="text" class="form__title form__input" placeholder="Tytuł">
 						</div>
 					</div>
-					<textarea name="" id="" cols="30" rows="10" class="form__text" placeholder="Treść wiadomości"></textarea>
+					<textarea name="area" class="form__text" placeholder="Treść wiadomości"></textarea>
 					<button class="form__btn btn">WYŚLIJ</button>
 				</form>
 			</div>
@@ -163,7 +197,9 @@
 	<footer class="footer__ftr footer">
 		<div class="ftr__container container">
 			<p class="ftr__icon">
-				<i class="fas fa-angle-up"></i>
+				<a href="#top-site">
+					<i class="fas fa-angle-up"></i>
+				</a>
 			</p>
 			<p class="ftr__logo">Usługi Stolarskie</p>
 			<p class="ftr__copyright">&copy 2018 copyright</p>
