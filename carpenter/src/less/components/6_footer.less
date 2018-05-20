@@ -1,21 +1,22 @@
-.footer__ftr {
+.ftr {
     text-align: center;
     background-color: @color-bg-2;
     color: @color-font-1;
 
-    .ftr__icon, .ftr__copyright {
+    &__icon,  {
+        display: inline-block;
         margin: 0;
-        padding: @space 0;
-    }
-
-    .fas {
-        cursor: pointer;
         font-size: @body-font-size * 2.8;
     }
 
-    .ftr__logo {
+    &__logo {
         margin: 0;
         font-family: @quote-font;
         font-size: @body-font-size * 2;
+    }
+
+    &__copyright {
+        margin: 0;
+        padding: @space 0;
     }
 }

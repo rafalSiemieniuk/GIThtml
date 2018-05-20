@@ -1,8 +1,6 @@
-const test = 'napisow';
-const jeden = '123';
+const loadingPage = document.getElementsByClassName('section__curtain')[0];
 
-console.log(`zbior ${test} teraz`);
-console.log(`zbior ${test} teraz`);
-
-console.log(`jeden ${jeden} jeden`);
-console.log(`jeden ${jeden} jeden`);
+window.addEventListener('load', function() {
+    loadingPage.classList.add('disappear');
+    setTimeout(function() { loadingPage.remove(); }, 1200);
+});

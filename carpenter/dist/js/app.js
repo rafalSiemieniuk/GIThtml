@@ -1,10 +1,10 @@
 'use strict';
 
-var test = 'napisow';
-var jeden = '123';
+var loadingPage = document.getElementsByClassName('section__curtain')[0];
 
-console.log('zbior ' + test + ' teraz');
-console.log('zbior ' + test + ' teraz');
-
-console.log('jeden ' + jeden + ' jeden');
-console.log('jeden ' + jeden + ' jeden');
+window.addEventListener('load', function () {
+    loadingPage.classList.add('disappear');
+    setTimeout(function () {
+        loadingPage.remove();
+    }, 1200);
+});

@@ -1,4 +1,4 @@
-.section__contact {
+.contact {
     position: relative;
     text-align: center;
 
@@ -13,21 +13,21 @@
         opacity: .1;
     }
     
-    .contact__container {
+    &__container {
         position: relative;
         z-index: 1;
         .wrapper();
     }
 
-    .contact__title {
+    &__title {
         &:extend(.border-bottom);
     }
 
-    .contact__informations {
+    &__informations {
         text-align: left;
     }
 
-    .contact__info-details {
+    &__info-details {
         padding-top: 30px;
         
         @media (max-width: @br-tablet) {
@@ -52,24 +52,24 @@
         }
     }
 
-    .contact__form {
+    .form {
         padding-top: 30px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-    }
 
-    .form__input, .form__text {
-        width: 100%;
-        padding: @space;
-        margin-bottom: @space * 2;
-    }
-
-    .form__text {
-        height: @space * 20;
-    }
-
-    .form__btn {
-        float: left;
+        &__input, &__text {
+            width: 100%;
+            padding: @space;
+            margin-bottom: @space * 2;
+        }
+    
+        &__text {
+            height: @space * 20;
+        }
+    
+        &__btn {
+            float: left;
+        }
     }
 }

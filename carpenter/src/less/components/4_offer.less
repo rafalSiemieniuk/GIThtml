@@ -1,4 +1,4 @@
-.section__offer {
+.offer {
     text-align: center;
     
     .offer__title {
@@ -9,8 +9,9 @@
         .wrapper();
     }
 
-     .offer__square {
+    .offer__square {
         position: relative;
+        display: block;
         margin-top: 30px;
         width: 100%;
         padding-bottom: 100%;
@@ -36,16 +37,18 @@
         }
 
         &:hover {
-            cursor: pointer;
-            transform:scale(1.05);
-            opacity: .7;
             z-index: 5;
-            samp::before,
-            samp::after,
-            samp span::before,
-            samp span::after  {
-                width: calc( 200px / 2);
-                height: calc( 100px / 2);
+            cursor: pointer;
+            @media (min-width: (@br-tablet - 1px)) {
+                transform:scale(1.05);
+                opacity: .7;
+                samp::before,
+                samp::after,
+                samp span::before,
+                samp span::after  {
+                    width: calc( 100% / 2 + 1.5px );
+                    height: calc( 100% / 2 + 2px );
+                }
             }
         }
     }

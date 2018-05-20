@@ -1,0 +1,29 @@
+.section__top-bg {
+    background-color: @color-font-2;
+    height: 50px;
+}
+
+.gallery {
+    text-align: center;
+    padding-top: @space * 3;
+
+    &__title {
+        &:extend(.border-bottom);
+    }
+
+    &__photo {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: @space * 2 0;
+      }
+      
+      &__photo img {
+        width: 100%;
+        height: 100%;
+      }
+
+}

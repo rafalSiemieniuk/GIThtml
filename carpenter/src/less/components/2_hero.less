@@ -1,4 +1,4 @@
-.section__hero {
+.hero {
     background: url(../img/hero8.jpg) center /cover no-repeat;
     background-attachment: fixed;
     height: 100vh;
@@ -14,7 +14,7 @@
         opacity: .25;
     }
 
-    .hero__container{
+    &__container{
         position: relative;
         z-index: 1;
         color: @color-font-1;
@@ -25,23 +25,23 @@
         text-align: center;
     }
 
-    .hero__wrap-logo {
+    &__wrap-logo {
         flex: 1 1 100%;
         font-family: @quote-font;
         order: 2;
     }
 
-    .hero__logo {
+    &__logo {
         font-size: @body-font-size * 3.2;
         margin: 0;
     }
 
-    .hero__owner {
+    &__owner {
         font-size: @body-font-size * 2;
         margin: 0 0 @space * 3 0;
     }
     
-    .hero__watchword {
+    &__watchword {
         flex: 1 1 100%;
         order: 3;
 
@@ -51,7 +51,7 @@
         }
     }
 ///////// Second div /////////
-    .hero__arrow {
+    &__arrow {
         position: relative;
         height: 50vh;
         z-index: 1;
@@ -60,7 +60,7 @@
         text-align: center;
     }
 
-    .hero__shadow-bg {
+    &__shadow-bg {
         padding: 0px @space * 4;
         position: absolute;
         top: @space * 6;
@@ -73,10 +73,11 @@
         &:hover {
             color: @color-font-2;
             background-color: @color-bg-1;
+            opacity: 1;
         }
     }
 
-    .hero__read-more {
+    &__read-more {
         font-size: @body-font-size * 1.2;
         margin: @space 0 @space * -1 0;
         position: relative;
