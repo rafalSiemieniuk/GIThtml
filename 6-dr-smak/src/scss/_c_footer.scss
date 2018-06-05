@@ -1,0 +1,48 @@
+.main-foot { 
+
+    &__nav {
+        margin-bottom: $space * 2;
+        margin-left: - $space;
+        margin-right: - $space;
+        // font-size: 0;
+
+        @include min-media($br-deskopt) {
+            padding-bottom: 1px; // dodajemy 1px aby pozbyc sie over lap
+        }
+
+        &__col {
+            margin-bottom: $space;
+            padding-left: $space;
+            padding-right: $space;
+            float: left;
+            width: 50%;
+
+            &:nth-child(odd) {
+                clear: both;
+            }
+            @include min-media($br-deskopt) {
+                width: 25%;
+                &:nth-child(odd) {
+                    clear: none;
+                }
+            }
+            /*display: inline-block;
+            vertical-align: top;
+            width: 25%;
+            font-size: $body-font-size;*/
+        }
+
+        &__cat {
+            display: inline-block;
+            font-weight: $fw-bold;
+            color: $color-1;
+            margin-top: 0;
+            margin-bottom: $space;
+        }
+    }
+
+    &__copy {
+        margin-top: $space;
+        font-size: $body-font-size2;
+    }
+}

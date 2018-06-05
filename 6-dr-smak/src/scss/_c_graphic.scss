@@ -1,0 +1,12 @@
+.graphic {
+    &__img {
+        vertical-align: middle;
+        @extend %simple-box-shadow;
+        max-width: none;
+        width: 100%;
+    }
+    &__hdr {
+        margin-top: $space * .5;
+        font-size: $body-font-size2;
+    }
+}

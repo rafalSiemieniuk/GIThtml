@@ -1,0 +1,10 @@
+@mixin min-media($brpoint) {
+    @media (min-width: $brpoint) {
+        @content;
+    }
+}
+@mixin max-media($brpoint) {
+    @media (max-width: $brpoint) {
+        @content;
+    }
+}
