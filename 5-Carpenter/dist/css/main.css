@@ -241,6 +241,9 @@ h3,
   display: inline-block;
   border-bottom: 2px solid #c04000;
 }
+.hidden {
+  opacity: 0;
+}
 /*!
  * Bootstrap Grid v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -2252,21 +2255,15 @@ html {
   }
 }
 /*# sourceMappingURL=bootstrap-grid.css.map */
-.header__nav-0 {
-  background-color: transparent;
-  color: #ffffff;
-}
-.header__nav-1 {
-  background-color: #fff;
-  box-shadow: 0 0.41665rem 0.41665rem #000000;
-}
-.header__logo-0 {
-  visibility: hidden;
-}
 .hdr {
   width: 100vw;
   position: fixed;
   z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  color: #ffffff;
+  transition: .3s;
 }
 .hdr__container {
   padding-top: 10px;
@@ -2279,6 +2276,7 @@ html {
   margin: 0;
   font-family: 'Playball', cursive;
   font-size: 20px;
+  opacity: 0;
 }
 @media (max-width: 1200px) {
   .hdr__main {
@@ -2323,16 +2321,15 @@ html {
   transform: scale(0);
 }
 .hdr .rwd__toggle:checked + .rwd__hamburger + .rwd__curtain-menu {
-  top: 0;
+  right: 0;
 }
 .hdr .rwd__curtain-menu {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  top: -100%;
-  left: 0;
-  right: 0;
+  top: 0;
+  right: -100%;
   bottom: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -2348,6 +2345,7 @@ html {
   padding-top: 1.6666rem;
   font-size: 2.2rem;
   text-align: center;
+  opacity: 1;
 }
 .hdr .rwd__logo {
   font-size: 3rem;
@@ -2361,7 +2359,7 @@ html {
   position: absolute;
   display: none;
   background-color: #ffffff;
-  box-shadow: 0 0.41665rem 0.41665rem #000000;
+  box-shadow: 0 0.24999rem 0.24999rem #000000;
   padding: 1.6666rem 3.3332rem;
 }
 .hdr .rwd__submenu {
@@ -2406,10 +2404,22 @@ html {
   width: 30px;
   margin: 0 auto;
 }
+.header__nav-1 {
+  background-color: #fff;
+  color: #808080;
+  box-shadow: 0 0.24999rem 0.24999rem #000000;
+}
+.header__logo-1 {
+  opacity: 1;
+}
 .hero {
   background: url(../img/hero8.jpg) center / cover no-repeat;
-  background-attachment: fixed;
   height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 .hero:after {
   content: "";
@@ -2489,40 +2499,41 @@ html {
   padding-top: 0.8333rem;
 }
 .about-us {
+  background-color: #ffffff;
   text-align: center;
+  position: relative;
+  margin-top: 100vh;
 }
-.about-us__container {
+.about-us .about-us__container {
   padding-top: 6.6664rem;
   padding-bottom: 6.6664rem;
+}
+@media (max-width: 1200px) {
+  .about-us .about-us__container {
+    padding-bottom: 4.9998rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-us .about-us__container {
+    padding-bottom: 3.3332rem;
+  }
+}
+@media (max-width: 576px) {
+  .about-us .about-us__container {
+    padding-bottom: 1.6666rem;
+  }
 }
 .about-us__info {
   padding-top: 15px;
   font-size: 2rem;
 }
 .offer {
+  background-color: #ffffff;
   text-align: center;
 }
 .offer .offer__container {
   padding-top: 6.6664rem;
   padding-bottom: 6.6664rem;
-}
-@media (max-width: 1200px) {
-  .offer .offer__container {
-    padding-top: 5.8331rem;
-    padding-bottom: 5.8331rem;
-  }
-}
-@media (max-width: 768px) {
-  .offer .offer__container {
-    padding-top: 4.9998rem;
-    padding-bottom: 4.9998rem;
-  }
-}
-@media (max-width: 576px) {
-  .offer .offer__container {
-    padding-top: 4.1665rem;
-    padding-bottom: 4.1665rem;
-  }
 }
 .offer .offer__square {
   position: relative;
@@ -2692,6 +2703,7 @@ html {
   }
 }
 .contact {
+  background-color: #ffffff;
   position: relative;
   text-align: center;
 }
@@ -2705,11 +2717,26 @@ html {
   background: url(../img/hero9.jpg) center / cover no-repeat;
   opacity: .1;
 }
-.contact__container {
+.contact .contact__container {
   position: relative;
   z-index: 1;
   padding-top: 6.6664rem;
   padding-bottom: 6.6664rem;
+}
+@media (max-width: 1200px) {
+  .contact .contact__container {
+    padding-bottom: 4.9998rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact .contact__container {
+    padding-bottom: 3.3332rem;
+  }
+}
+@media (max-width: 576px) {
+  .contact .contact__container {
+    padding-bottom: 1.6666rem;
+  }
 }
 .contact__informations {
   text-align: left;
@@ -2734,6 +2761,9 @@ html {
 .contact__info-details i {
   padding: 0 1.6666rem;
   line-height: 2.5rem;
+}
+.contact__name-phone {
+  padding-right: 12px;
 }
 .contact .form {
   padding-top: 30px;
@@ -2776,9 +2806,6 @@ html {
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
   }
@@ -2787,9 +2814,6 @@ html {
   0% {
     opacity: 0;
   }
-  30% {
-    opacity: .0;
-  }
   100% {
     opacity: 1;
   }
@@ -2797,54 +2821,7 @@ html {
 .slide-in {
   -webkit-animation: 2s slideIn;
   animation: 2s slideIn;
-}
-@-webkit-keyframes slideInRight {
-  0% {
-    opacity: 0;
-    right: 300px;
-  }
-  100% {
-    opacity: 1;
-    right: 0px;
-  }
-}
-@keyframes slideInRight {
-  0% {
-    opacity: 0;
-    right: 300px;
-  }
-  100% {
-    opacity: 1;
-    right: 0px;
-  }
-}
-.slide-in-right {
-  -webkit-animation: 2s slideInRight;
-  animation: 2s slideInRight;
-}
-@-webkit-keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    left: 300px;
-  }
-  100% {
-    opacity: 1;
-    left: 0px;
-  }
-}
-@keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    left: 300px;
-  }
-  100% {
-    opacity: 1;
-    left: 0px;
-  }
-}
-.slide-in-left {
-  -webkit-animation: 2s slideInLeft;
-  animation: 2s slideInLeft;
+  animation-fill-mode: forwards;
 }
 @-webkit-keyframes sk-rotateplane {
   0% {

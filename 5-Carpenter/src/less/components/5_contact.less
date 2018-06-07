@@ -1,4 +1,5 @@
 .contact {
+    background-color: @color-bg-1;
     position: relative;
     text-align: center;
 
@@ -13,10 +14,10 @@
         opacity: .1;
     }
     
-    &__container {
+    .contact__container {
         position: relative;
         z-index: 1;
-        .wrapper();
+        .wrapper-irregular();
     }
 
     &__title {
@@ -50,6 +51,10 @@
             padding: 0 @space * 2;
             line-height: @base-unit * 2.5;
         }
+    }
+
+    &__name-phone {
+        padding-right: 12px;
     }
 
     .form {
