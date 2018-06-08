@@ -2,7 +2,7 @@
 
 ////////////////--jQuery--////////////////
 
-$(function () {
+(function ($) {
 
     window.wasScrolled = false;
     $(window).bind('scroll', function () {
@@ -16,13 +16,13 @@ $(function () {
 
     $('.hdr__container').hide();
     $(window).scroll(function () {
-        if ($('.section__about-us').offset().top - $(window).scrollTop() < 10) $('.hdr__container').show(1000);
+        if ($('.section__about-us').offset().top - $(window).scrollTop() < 10) $('.hdr__container').show(400);
+        document.getElementById('toggle').checked = false;
     });
 
     $('.rwd__li').click(function () {
         document.getElementById('toggle').checked = false;
     });
-
     $('#readMore, .hdr__about-us').click(function () {
         scrollSlide('.section__about-us');
     });
@@ -39,17 +39,70 @@ $(function () {
     });
 
     animation('.about-us__container', 'slide-in');
-    animation('.offer__title', 'slide-in');
-    for (var i = 1; i < 7; i++) {
-        animation('.photo-' + i, 'slide-in');
-    }
+    animation('.offer__btn', 'slide-in');
 
     windowScrollScope('.hdr__logo', '.section__about-us', 'footer', 'header__logo-1');
     windowScrollScope('header', '.section__about-us', 'footer', 'header__nav-1');
-
     windowScrollScope('.hdr__about-us', '.section__about-us', '.section__offer', 'hdr__border-bottom');
     windowScrollScope('.hdr__offer', '.section__offer', '.section__contact', 'hdr__border-bottom');
     windowScrollScope('.hdr__contact', '.section__contact', 'footer', 'hdr__border-bottom');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= $('.section__about-us').offset().top + 50) {
+            $('#top-site').removeClass('hero--background');
+            $('#top-site').hide();
+        } else {
+            $('#top-site').addClass('hero--background');
+            $('#top-site').show();
+        }
+    });
+
+    ////--Slide In (as you scroll down) Boxes--////
+
+    /**
+     * Copyright 2012, Digital Fusion
+     * Licensed under the MIT license.
+     * http://teamdf.com/jquery-plugins/license/
+     *
+     * @author Sam Sehnert
+     * @desc A small plugin that checks whether elements are within
+     *     the user visible viewport of a web browser.
+     *     only accounts for vertical position, not horizontal.
+     */
+
+    $.fn.visible = function (partial) {
+
+        var $t = $(this),
+            $w = $(window),
+            viewTop = $w.scrollTop(),
+            viewBottom = viewTop + $w.height(),
+            _top = $t.offset().top,
+            _bottom = _top + $t.height(),
+            compareTop = partial === true ? _bottom : _top,
+            compareBottom = partial === true ? _top : _bottom;
+
+        return compareBottom <= viewBottom && compareTop >= viewTop;
+    };
+})(jQuery);
+
+var win = $(window);
+
+var allMods = $('.module');
+
+allMods.each(function (i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+        el.addClass('already-visible');
+    }
+});
+
+win.scroll(function (event) {
+    allMods.each(function (i, el) {
+        var el = $(el);
+        if (el.visible(true)) {
+            el.addClass('come-in');
+        }
+    });
 });
 
 ////////////////--pure JavaScript--////////////////
@@ -75,7 +128,7 @@ function scrollSlide(section) {
 function animation(element, animationsType) {
     var positionTop = $(element).offset().top;
     $(window).scroll(function () {
-        if (positionTop - $(window).scrollTop() <= $(window).height() * .75) $(element).addClass(animationsType);
+        if (positionTop - $(window).scrollTop() <= $(window).height() * .8) $(element).addClass(animationsType);
     });
 }
 

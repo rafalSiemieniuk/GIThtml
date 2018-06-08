@@ -239,7 +239,7 @@ h3,
 .contact__title,
 .gallery__title {
   display: inline-block;
-  border-bottom: 2px solid #c04000;
+  border-bottom: calc(0.25rem) solid #c04000;
 }
 .hidden {
   opacity: 0;
@@ -2296,6 +2296,7 @@ html {
 }
 .hdr .rwd__hamburger-component {
   position: relative;
+  display: block;
   width: 50px;
   height: 5px;
   border-radius: 3px;
@@ -2413,7 +2414,6 @@ html {
   opacity: 1;
 }
 .hero {
-  background: url(../img/hero8.jpg) center / cover no-repeat;
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -2421,7 +2421,10 @@ html {
   left: 0;
   z-index: -1;
 }
-.hero:after {
+.hero--background {
+  background: url(../img/hero8.jpg) center / cover no-repeat;
+}
+.hero--background:after {
   content: "";
   position: absolute;
   top: 0;
@@ -2451,7 +2454,7 @@ html {
   margin: 0;
 }
 .hero__owner {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin: 0 0 2.4999rem 0;
 }
 .hero__watchword {
@@ -2765,6 +2768,14 @@ html {
 .contact__name-phone {
   padding-right: 12px;
 }
+.contact__hyperlink {
+  position: relative;
+}
+.contact__hyperlink i {
+  position: absolute;
+  right: -4.1665rem;
+  top: 0;
+}
 .contact .form {
   padding-top: 30px;
   display: flex;
@@ -2820,8 +2831,8 @@ html {
 }
 .slide-in {
   -webkit-animation: 2s slideIn;
-  animation: 2s slideIn;
-  animation-fill-mode: forwards;
+  animation: 1s slideIn;
+  opacity: 1;
 }
 @-webkit-keyframes sk-rotateplane {
   0% {
@@ -2887,6 +2898,19 @@ html {
 .disappear {
   opacity: 0;
   transition: all 1s;
+}
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+@keyframes come-in {
+  to {
+    transform: translateY(0);
+  }
 }
 .section__top-bg {
   background-color: #808080;

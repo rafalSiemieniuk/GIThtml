@@ -18,8 +18,8 @@
 
 .slide-in {
     -webkit-animation: 2s slideIn;
-    animation: 2s slideIn;
-    animation-fill-mode: forwards;
+    animation: 1s slideIn;
+    opacity: 1; 
 }
 
 /////////////////////////////////////////
@@ -92,4 +92,20 @@
   .disappear {
       opacity: 0;
       transition: all 1s;
+  }
+
+  //////////////////////////////////////////////
+     
+  .come-in {
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+  }
+ 
+  .already-visible {
+    transform: translateY(0);
+    animation: none;
+  }
+  
+  @keyframes come-in {
+    to { transform: translateY(0); }
   }
