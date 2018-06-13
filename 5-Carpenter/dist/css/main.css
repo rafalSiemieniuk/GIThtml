@@ -2289,7 +2289,7 @@ html {
 .hdr__rwd {
   color: #808080;
 }
-@media (min-width: 1199px) {
+@media (min-width: 1201px) {
   .hdr__rwd {
     display: none;
   }
@@ -2414,6 +2414,7 @@ html {
   opacity: 1;
 }
 .hero {
+  background: url(../img/hero8.jpg) center / cover no-repeat;
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -2421,10 +2422,22 @@ html {
   left: 0;
   z-index: -1;
 }
-.hero--background {
-  background: url(../img/hero8.jpg) center / cover no-repeat;
+@media (max-width: 1200px) {
+  .hero {
+    background: url(../img/hero8-tablet.jpg) center / cover no-repeat;
+  }
 }
-.hero--background:after {
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    background: url(../img/hero8-mobile-landscape.jpg) center / cover no-repeat;
+  }
+}
+@media (max-width: 576px) {
+  .hero {
+    background: url(../img/hero8-mobile.jpg) center / cover no-repeat;
+  }
+}
+.hero:after {
   content: "";
   position: absolute;
   top: 0;
@@ -2573,6 +2586,7 @@ html {
   .offer .offer__square:hover {
     transform: scale(1.05);
     opacity: .7;
+    background-size: 150%;
   }
   .offer .offer__square:hover samp::before,
   .offer .offer__square:hover samp::after,
@@ -2587,14 +2601,35 @@ html {
     padding-bottom: calc(50% - 15px);
   }
 }
-.offer .photo-1::after {
-  background: #808080 url(../img/1.jpg) center / cover no-repeat;
+@media (min-width: 575px) {
+  .offer .photo-1::after {
+    background: #808080 url(../img/1.jpg) center / cover no-repeat;
+  }
 }
-.offer .photo-2::after {
-  background: #808080 url(../img/2.jpg) center / cover no-repeat;
+@media (max-width: 576px) {
+  .offer .photo-1::after {
+    background: #808080 url(../img/1-mobile.jpg) center / cover no-repeat;
+  }
 }
-.offer .photo-3::after {
-  background: #808080 url(../img/3.jpg) center / cover no-repeat;
+@media (min-width: 575px) {
+  .offer .photo-2::after {
+    background: #808080 url(../img/2.jpg) center / cover no-repeat;
+  }
+}
+@media (max-width: 576px) {
+  .offer .photo-2::after {
+    background: #808080 url(../img/2-mobile.jpg) center / cover no-repeat;
+  }
+}
+@media (min-width: 575px) {
+  .offer .photo-3::after {
+    background: #808080 url(../img/3.jpg) center / cover no-repeat;
+  }
+}
+@media (max-width: 576px) {
+  .offer .photo-3::after {
+    background: #808080 url(../img/3-mobile.jpg) center / cover no-repeat;
+  }
 }
 @media (min-width: 575px) {
   .offer .photo-4 {
@@ -2606,9 +2641,6 @@ html {
     padding-bottom: calc(200% + 30px);
   }
 }
-.offer .photo-4::after {
-  background: #808080 url(../img/4.jpg) center / cover no-repeat;
-}
 @media (min-width: 575px) {
   .offer .photo-4::after {
     background: #808080 url(../img/4-landscape.jpg) center / cover no-repeat;
@@ -2619,16 +2651,35 @@ html {
     background: #808080 url(../img/4-vertical.jpg) center / cover no-repeat;
   }
 }
+@media (max-width: 576px) {
+  .offer .photo-4::after {
+    background: #808080 url(../img/4-mobile.jpg) center / cover no-repeat;
+  }
+}
 @media (min-width: 767px) {
   .offer .photo-5 {
     padding-bottom: calc(50% - 15px);
   }
 }
-.offer .photo-5::after {
-  background: #808080 url(../img/5.jpg) center / cover no-repeat;
+@media (min-width: 575px) {
+  .offer .photo-5::after {
+    background: #808080 url(../img/5.jpg) center / cover no-repeat;
+  }
 }
-.offer .photo-6::after {
-  background: #808080 url(../img/6.jpg) center / cover no-repeat;
+@media (max-width: 576px) {
+  .offer .photo-5::after {
+    background: #808080 url(../img/5-mobile.jpg) center / cover no-repeat;
+  }
+}
+@media (min-width: 575px) {
+  .offer .photo-6::after {
+    background: #808080 url(../img/6.jpg) center / cover no-repeat;
+  }
+}
+@media (max-width: 576px) {
+  .offer .photo-6::after {
+    background: #808080 url(../img/6-mobile.jpg) center / cover no-repeat;
+  }
 }
 .offer .square__content {
   position: absolute;
@@ -2717,8 +2768,17 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  background: url(../img/hero9.jpg) center / cover no-repeat;
   opacity: .1;
+}
+@media (min-width: 767px) {
+  .contact::after {
+    background: url(../img/hero9.jpg) center / cover no-repeat;
+  }
+}
+@media (max-width: 768px) {
+  .contact::after {
+    background: url(../img/hero9-mobile.jpg) center / cover no-repeat;
+  }
 }
 .contact .contact__container {
   position: relative;
@@ -2793,6 +2853,38 @@ html {
 }
 .contact .form__btn {
   float: left;
+}
+.contact__map {
+  width: 100%;
+  margin-bottom: -15px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  height: 100%;
+}
+.contact__frame {
+  width: calc(100% + 30px);
+  margin: 0 -15px;
+  min-height: 568px;
+}
+@media (max-width: 1200px) {
+  .contact__frame {
+    min-height: 358px;
+  }
+}
+@media (max-width: 992px) {
+  .contact__frame {
+    min-height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .contact__frame {
+    min-height: 358px;
+  }
+}
+@media (max-width: 576px) {
+  .contact__frame {
+    min-height: 150px;
+  }
 }
 .ftr {
   text-align: center;
