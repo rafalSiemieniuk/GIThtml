@@ -2405,7 +2405,8 @@ html {
   width: 30px;
   margin: 0 auto;
 }
-.header__nav-1 {
+.header__nav-1,
+.header__gallery {
   background-color: #fff;
   color: #808080;
   box-shadow: 0 0.24999rem 0.24999rem #000000;
@@ -2577,6 +2578,8 @@ html {
   bottom: 0;
   right: 0;
   left: 0;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .offer .offer__square:hover {
   z-index: 5;
@@ -2922,8 +2925,29 @@ html {
   }
 }
 .slide-in {
-  -webkit-animation: 2s slideIn;
+  -webkit-animation: 1s slideIn;
   animation: 1s slideIn;
+  opacity: 1;
+}
+@-webkit-keyframes slideOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.slide-out {
+  -webkit-animation: .25s slideOut;
+  animation: .5s slideOut;
   opacity: 1;
 }
 @-webkit-keyframes sk-rotateplane {
@@ -3004,24 +3028,64 @@ html {
     transform: translateY(0);
   }
 }
-.section__top-bg {
-  background-color: #808080;
-  height: 50px;
+.description {
+  padding-top: 60px;
+}
+.description__title {
+  margin: 1.6666rem 0 0.8333rem 0;
+  text-indent: 2.4999rem;
+}
+.description__info {
+  font-size: 2rem;
+  text-indent: 2.4999rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .gallery {
   text-align: center;
-  padding-top: 2.4999rem;
+  padding-top: 60px;
 }
-.gallery__photo {
-  display: inline-block;
-  position: relative;
-  width: 200px;
-  height: 200px;
+.gallery .row {
+  justify-content: center;
+}
+.gallery .row div {
+  max-width: 250px;
+  height: 150px;
+}
+.gallery .row div div {
+  max-height: 120px;
   overflow: hidden;
-  border-radius: 50%;
-  margin: 1.6666rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: grey;
 }
-.gallery__photo img {
-  width: 100%;
+.gallery img:hover {
+  cursor: zoom-in;
+}
+.gallery .bigImg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  max-height: 90vh;
+  max-width: 90vw;
+}
+.gallery .bigImg:hover {
+  cursor: zoom-out;
+}
+.backdrop::before {
+  display: block;
+  content: "";
+  background-color: #424242;
+  position: fixed;
+  top: 0;
+  right: 0;
   height: 100%;
+  width: 100%;
+  opacity: .7;
+  z-index: 40;
+  transition: all 1s;
 }

@@ -17,9 +17,35 @@
 }
 
 .slide-in {
-    -webkit-animation: 2s slideIn;
+    -webkit-animation: 1s slideIn;
     animation: 1s slideIn;
     opacity: 1; 
+}
+
+/////////////////////////////////////////
+
+@-webkit-keyframes slideOut {
+    0% { 
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+    }
+}
+
+@keyframes slideOut {
+    0% { 
+        opacity: 1; 
+    }
+    100% { 
+        opacity: 0;
+    }
+}
+
+.slide-out {
+    -webkit-animation: .25s slideOut;
+    animation: .5s slideOut;
+    opacity: 1;
 }
 
 /////////////////////////////////////////
@@ -100,7 +126,7 @@
     transform: translateY(150px);
     animation: come-in 0.8s ease forwards;
   }
- 
+
   .already-visible {
     transform: translateY(0);
     animation: none;
