@@ -82,7 +82,6 @@ function scrollSlide(section) {
 }
 
 function slideInBoxes(element) {
-    var _this = this;
 
     ////--Slide In (as you scroll down) Boxes--////
     /**
@@ -97,7 +96,8 @@ function slideInBoxes(element) {
      */
 
     $.fn.visible = function (partial) {
-        var $t = $(_this),
+
+        var $t = $(this),
             $w = $(window),
             viewTop = $w.scrollTop(),
             viewBottom = viewTop + $w.height(),
@@ -105,24 +105,27 @@ function slideInBoxes(element) {
             _bottom = _top + $t.height(),
             compareTop = partial === true ? _bottom : _top,
             compareBottom = partial === true ? _top : _bottom;
+
         return compareBottom <= viewBottom && compareTop >= viewTop;
     };
 
     var win = $(window);
+
     var allMods = $(element);
 
     allMods.each(function (i, el) {
         var el = $(el);
         if (el.visible(true)) {
-            el.addClass('already-visible');
+            el.addClass("already-visible");
         }
     });
 
     win.scroll(function (event) {
+
         allMods.each(function (i, el) {
             var el = $(el);
             if (el.visible(true)) {
-                el.addClass('come-in');
+                el.addClass("come-in");
             }
         });
     });

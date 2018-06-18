@@ -98,7 +98,8 @@ function slideInBoxes(element) {
      *     only accounts for vertical position, not horizontal.
      */
 
-    $.fn.visible = (partial) => {
+    $.fn.visible = function (partial) {
+
         var $t = $(this),
             $w = $(window),
             viewTop = $w.scrollTop(),
@@ -107,26 +108,31 @@ function slideInBoxes(element) {
             _bottom = _top + $t.height(),
             compareTop = partial === true ? _bottom : _top,
             compareBottom = partial === true ? _top : _bottom;
+
         return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
     };
 
     var win = $(window);
+
     var allMods = $(element);
 
-    allMods.each((i, el) => {
+    allMods.each(function (i, el) {
         var el = $(el);
         if (el.visible(true)) {
-            el.addClass('already-visible');
+            el.addClass("already-visible");
         }
     });
 
-    win.scroll((event) => {
-        allMods.each((i, el) => {
+    win.scroll(function (event) {
+
+        allMods.each(function (i, el) {
             var el = $(el);
             if (el.visible(true)) {
-                el.addClass('come-in');
+                el.addClass("come-in");
             }
         });
+
     });
     ////--End Slide In (as you scroll down) Boxes--////
 }
