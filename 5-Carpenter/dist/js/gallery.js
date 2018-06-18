@@ -1,17 +1,19 @@
 'use strict';
 
-//nazwe zdjecia wpisujemy z rozszerzeniem po enterach
+//Nazwy zdjęć wpisuj z rozszerzeniem po spacji. Grupę zdjęć z jednej kategorii umieszczaj w cudzysłowie.
+// np: var schody = 'schody1.jpg schody2.jpg';
 
-var schody = '\nschody1.jpg\nschody2.jpg\nschody3.jpg\nschody4.jpg\nschody5.jpg\nschody6.jpg\nschody7.jpg\nschody8.jpg\n';
+var schody = 'schody1.jpg schody2.jpg schody3.jpg schody4.jpg schody5.jpg schody6.jpg schody7.jpg schody8.jpg schody9.jpg schody10.jpg schody11.jpg schody12.jpg';
 
-var meble = '\nmeble1.jpg\nmeble2.jpg\nmeble3.jpg\nmeble4.jpg\nmeble5.jpg\nmeble6.jpg\nmeble7.jpg\nmeble8.jpg\n';
+var meble = 'meble1.jpg meble2.jpg meble3.jpg meble4.jpg meble5.jpg meble6.jpg meble7.jpg meble8.jpg meble9.jpg meble10.jpg meble11.jpg meble12.jpg meble13.jpg meble14.jpg meble15.jpg meble16.jpg meble17.jpg meble18.jpg meble19.jpg meble20.jpg';
 
-var stoly = '\nstol1.jpg\nstol2.jpg\n';
+var stoly = 'stol1.jpg stol2.jpg';
 
-var drzwi = '\ndrzwi1.jpg\ndrzwi2.jpg\ndrzwi3.jpg\ndrzwi4.jpg\ndrzwi5.jpg\ndrzwi6.jpg\n';
-var szalowka = '\nszalowka1.jpg\nszalowka2.jpg\nszalowka3.jpg\nszalowka4.jpg\n';
+var drzwi = 'drzwi1.jpg drzwi2.jpg drzwi3.jpg drzwi4.jpg drzwi5.jpg drzwi6.jpg drzwi7.jpg drzwi8.jpg drzwi9.jpg drzwi10.jpg';
 
-var pozostale = '\npozostale1.jpg\npozostale2.jpg\n';
+var szalowka = 'szalowka1.jpg szalowka2.jpg szalowka3.jpg szalowka4.jpg szalowka5.jpg szalowka6.jpg szalowka7.jpg';
+
+var pozostale = 'pozostale1.jpg pozostale2.jpg pozostale3.jpg pozostale4.jpg pozostale5.jpg pozostale6.jpg pozostale7.jpg pozostale8.jpg pozostale9.jpg pozostale10.jpg pozostale11.jpg pozostale12.jpg';
 
 //
 //
@@ -21,30 +23,30 @@ var pozostale = '\npozostale1.jpg\npozostale2.jpg\n';
 //                    ||
 //                    \/
 
-
-var stairs = schody.split('\n').filter(function (element) {
+var separator = ' ';
+var stairs = schody.split(separator).filter(function (element) {
     return element !== '';
 });
-var furnitures = meble.split('\n').filter(function (element) {
+var furnitures = meble.split(separator).filter(function (element) {
     return element !== '';
 });
-var tables = stoly.split('\n').filter(function (element) {
+var tables = stoly.split(separator).filter(function (element) {
     return element !== '';
 });
-var doors = drzwi.split('\n').filter(function (element) {
+var doors = drzwi.split(separator).filter(function (element) {
     return element !== '';
 });
-var boards = szalowka.split('\n').filter(function (element) {
+var boards = szalowka.split(separator).filter(function (element) {
     return element !== '';
 });
-var others = pozostale.split('\n').filter(function (element) {
+var others = pozostale.split(separator).filter(function (element) {
     return element !== '';
 });
 
 var allPictures = [stairs, furnitures, tables, doors, boards, others];
 var row = document.querySelectorAll('.gallery .row');
 var template = '<div class="col-12 col-sm-6 col-md-4 col-xl-3">\n                    <div class="gallery__photo">\n                    </div>\n                  </div>';
-
+console.log(allPictures);
 ////////////////--jQuery--////////////////
 
 (function ($) {

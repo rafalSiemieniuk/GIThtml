@@ -1,84 +1,17 @@
-//nazwe zdjecia wpisujemy z rozszerzeniem po enterach
+//Nazwy zdjęć wpisuj z rozszerzeniem po spacji. Grupę zdjęć z jednej kategorii umieszczaj w cudzysłowie.
+// np: var schody = 'schody1.jpg schody2.jpg';
 
-let schody = `
-schody1.jpg
-schody2.jpg
-schody3.jpg
-schody4.jpg
-schody5.jpg
-schody6.jpg
-schody7.jpg
-schody8.jpg
-schody9.jpg
-schody10.jpg
-schody11.jpg
-schody12.jpg
-`;
+let schody = 'schody1.jpg schody2.jpg schody3.jpg schody4.jpg schody5.jpg schody6.jpg schody7.jpg schody8.jpg schody9.jpg schody10.jpg schody11.jpg schody12.jpg';
 
-let meble = `
-meble1.jpg
-meble2.jpg
-meble3.jpg
-meble4.jpg
-meble5.jpg
-meble6.jpg
-meble7.jpg
-meble8.jpg
-meble9.jpg
-meble10.jpg
-meble11.jpg
-meble12.jpg
-meble13.jpg
-meble14.jpg
-meble15.jpg
-meble16.jpg
-meble17.jpg
-meble18.jpg
-meble19.jpg
-meble20.jpg
-`;
+let meble = 'meble1.jpg meble2.jpg meble3.jpg meble4.jpg meble5.jpg meble6.jpg meble7.jpg meble8.jpg meble9.jpg meble10.jpg meble11.jpg meble12.jpg meble13.jpg meble14.jpg meble15.jpg meble16.jpg meble17.jpg meble18.jpg meble19.jpg meble20.jpg';
 
-let stoly = `
-stol1.jpg
-stol2.jpg
-`;
+let stoly = 'stol1.jpg stol2.jpg';
 
-let drzwi = `
-drzwi1.jpg
-drzwi2.jpg
-drzwi3.jpg
-drzwi4.jpg
-drzwi5.jpg
-drzwi6.jpg
-drzwi7.jpg
-drzwi8.jpg
-drzwi9.jpg
-drzwi10.jpg
-`;
-let szalowka = `
-szalowka1.jpg
-szalowka2.jpg
-szalowka3.jpg
-szalowka4.jpg
-szalowka5.jpg
-szalowka6.jpg
-szalowka7.jpg
-`;
+let drzwi = 'drzwi1.jpg drzwi2.jpg drzwi3.jpg drzwi4.jpg drzwi5.jpg drzwi6.jpg drzwi7.jpg drzwi8.jpg drzwi9.jpg drzwi10.jpg';
 
-let pozostale = `
-pozostale1.jpg
-pozostale2.jpg
-pozostale3.jpg
-pozostale4.jpg
-pozostale5.jpg
-pozostale6.jpg
-pozostale7.jpg
-pozostale8.jpg
-pozostale9.jpg
-pozostale10.jpg
-pozostale11.jpg
-pozostale12.jpg
-`;
+let szalowka = 'szalowka1.jpg szalowka2.jpg szalowka3.jpg szalowka4.jpg szalowka5.jpg szalowka6.jpg szalowka7.jpg';
+
+let pozostale = 'pozostale1.jpg pozostale2.jpg pozostale3.jpg pozostale4.jpg pozostale5.jpg pozostale6.jpg pozostale7.jpg pozostale8.jpg pozostale9.jpg pozostale10.jpg pozostale11.jpg pozostale12.jpg';
 
 
 //
@@ -89,13 +22,13 @@ pozostale12.jpg
 //                    ||
 //                    \/
 
-
-const stairs = schody.split('\n').filter(element => element !== '');
-const furnitures = meble.split('\n').filter(element => element !== '');
-const tables = stoly.split('\n').filter(element => element !== '');
-const doors = drzwi.split('\n').filter(element => element !== '');
-const boards = szalowka.split('\n').filter(element => element !== '');
-const others = pozostale.split('\n').filter(element => element !== '');
+const separator = ' ';
+const stairs = schody.split(separator).filter(element => element !== '');
+const furnitures = meble.split(separator).filter(element => element !== '');
+const tables = stoly.split(separator).filter(element => element !== '');
+const doors = drzwi.split(separator).filter(element => element !== '');
+const boards = szalowka.split(separator).filter(element => element !== '');
+const others = pozostale.split(separator).filter(element => element !== '');
 
 const allPictures = [stairs, furnitures, tables, doors, boards, others];
 let row = document.querySelectorAll('.gallery .row');
@@ -103,7 +36,7 @@ const template = `<div class="col-12 col-sm-6 col-md-4 col-xl-3">
                     <div class="gallery__photo">
                     </div>
                   </div>`;
-
+console.log(allPictures);
 ////////////////--jQuery--////////////////
 
 (function ($) {
