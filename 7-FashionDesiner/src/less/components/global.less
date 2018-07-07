@@ -1,0 +1,101 @@
+html {
+    box-sizing: border-box;
+    background-color: @color-bg-1;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 12px;
+    @media (max-width: @br-tablet) {
+        font-size: 10px;    
+    }
+    @media (max-width: @br-mobile) {
+        font-size: 8px;    
+    }
+}
+
+body {
+    font-family: @font-1;  
+    font-size: @body-font-size;
+    line-height: @body-line-height;
+    color: @color-font-2;
+    letter-spacing: 1px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background: none;
+    border: 0;
+    padding: 0;
+}
+
+p {
+    margin-top: @space; 
+    margin-bottom: @space; 
+}
+
+h1, .h1 {
+    font-size: @h1-font-size;
+    letter-spacing: 0;
+    margin-bottom: @space;
+}
+h2, .h2 {
+    font-size: @h2-font-size;
+    letter-spacing: 0;
+}
+h3, .h3 {
+    font-size: @h3-font-size;
+    letter-spacing: 0;
+    margin-bottom: @space;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding-left: @space;
+    padding-right: @space;
+    max-width: @width-wrapper;
+} 
+
+.btn {
+    padding: @space * 1.5 @space * 5;
+    color: @color-font-1;
+    min-width: 150px;
+    font-size: @base-unit * 1.3;
+    background-color: @color-btn-1;
+    cursor: pointer;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer"
+}
+
+.hdr {
+    grid-area: header;
+}
+.content {
+    grid-area: content;
+}
+.ftr {
+    grid-area: footer;
+}

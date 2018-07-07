@@ -1,7 +1,7 @@
 zadanie Politechniki Bia³ostockiej
 
 1. Zrealizuj projekt na podstawie szablonu
-
+2. technika wykonania: HTML/SCSS/JS
 
 <a href="https://rafalsiemieniuk.github.io/0_pb_task/index.html">my feat</a>
 

@@ -1,6 +1,6 @@
-zadanie 4
+﻿zadanie 4
 
-1. technika wykonania: HTML/CSS/JS
+1. technika wykonania: HTML/SCSS
 2. RWD samodzielnie
 3. Zdjęcia we własnym zakresie.
 
