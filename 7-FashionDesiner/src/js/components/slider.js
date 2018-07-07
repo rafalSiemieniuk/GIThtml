@@ -1,4 +1,3 @@
-// const throttle = require('lodash.throttle');
 const slider = (() => {
 
     class Slider {
@@ -11,9 +10,9 @@ const slider = (() => {
             this.sliderCont = elemSelector.firstElementChild;
             this.slideCollection = elemSelector.firstElementChild.children;
             this.currentSlide = 0;
-            this.time = null; //tutaj będziemy podczepiać setTimeout
-            this.prev = null; //przycisk prev
-            this.next = null; //przucisl next
+            this.time = null;
+            this.prev = null;
+            this.next = null;
             this.slides = [];
             this.dots = [];
             this.setMargin()
@@ -22,10 +21,21 @@ const slider = (() => {
             this.createDots();
             this.changeToMargin(this.currentSlide);
             this.touchMoveSlide();
-
+            this.eventKeyboardArrows();
         }
         setMargin() {
             this.sliderCont.style.marginLeft = 0;
+        }
+        eventKeyboardArrows() {
+            window.addEventListener('keydown', (event) => {
+                if (event.keyCode === 37) {
+                    this.slidePrev();
+                } else if (event.keyCode === 39) {
+                    this.slideNext();
+                } else {
+                    return;
+                }
+            });
         }
         touchMoveSlide() {
             let shortTouch;
@@ -49,14 +59,14 @@ const slider = (() => {
                 this.sliderCont.style.marginLeft = `${firstMargin + shiftX}%`;
             });
             this.sliderCont.addEventListener('touchend', (event) => {
-                if (shortTouch || this.distanceSwiped(shiftX, 70)) {
-                    this.changeToIndex(firstMargin + this.distanceSwiped(shiftX, 0));
+                if (shortTouch && this.distanceSwiped(shiftX, 20)) {
+                    this.changeToIndex(firstMargin + this.distanceSwiped(shiftX));
                 } else {
                     this.changeToIndex(firstMargin);
                 };
             });
         }
-        distanceSwiped(shiftX, jump) {
+        distanceSwiped(shiftX, jump = 0) {
             if (Math.abs(shiftX) < jump) {
                 return 0;
             } else if (shiftX < -jump) {
@@ -79,13 +89,16 @@ const slider = (() => {
         changeToMargin(index) {
             this.sliderCont.style.marginLeft = `${index * -100}%`;
 
-            //robimy pętlę po tablicy kropek usuwając klasę active
             this.dots.forEach(dot => {
                 dot.classList.remove('slider-dots-element-active');
             });
+            if (!(this.options.generateDots)) {
+                this.dots.forEach((dot) => {
+                    dot.classList.add('slider-dots-element-hidden');
+                });
+            }
             this.dots[index].classList.add('slider-dots-element-active');
 
-            //aktualny slide przestawiamy na wybrany
             this.currentSlide = index;
 
             if (this.options.pauseTime !== 0) {
@@ -141,12 +154,8 @@ const slider = (() => {
             const ulDots = document.createElement('ul');
             ulDots.classList.add('slider-dots');
             ulDots.setAttribute('aria-label', 'Slider pagination');
-            //tworzymy pętlę w ilości liczby slajów
-            for (let i = 0; i < this.slides.length; i++) {
-                //każdorazowo tworzymy LI wraz z buttonem
-                //każdy button po kliknięciu zmieni slajd
-                //za pomocą metody changeSlide()
 
+            for (let i = 0; i < this.slides.length; i++) {
                 const li = document.createElement('li');
                 li.classList.add('slider-dots-element');
 
@@ -169,7 +178,7 @@ const slider = (() => {
 
     const slideElement = document.getElementsByClassName('slider__element')
     const idSlider = document.getElementById('slider')
-    const sliderOne = new Slider(idSlider, 0)
+    const sliderOne = new Slider(idSlider, 3000)
 })();
 
 export default slider;
