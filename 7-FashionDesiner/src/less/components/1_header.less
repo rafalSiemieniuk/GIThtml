@@ -9,14 +9,13 @@
         align-items: center;
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas: "A B C";
-        .mixin-max-media(@br-mobile);
+        .mixin-max-media(@br-mobile); 
         .rwd {
             justify-items: center;
             grid-template-columns: 1fr minmax(max-content,1fr) minmax(max-content,1fr) 1fr;
             grid-template-areas: 
             "A A A A" 
             ". B C .";
-            
         }    
     }
 

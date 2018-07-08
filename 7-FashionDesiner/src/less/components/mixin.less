@@ -8,10 +8,15 @@
         .rwd();
     }
 }
-.flex() {
+.center(@horizontal: center, @vertical: center) {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: @horizontal;
+    align-items: @vertical;
 }
-
-  
+.position-absolute(@top: 0, @right: 0, @bottom: 0, @left: 0) {
+    position: absolute;
+    top: @top;
+    right: @right;
+    bottom: @bottom;
+    left: @left;
+}

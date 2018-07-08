@@ -16,14 +16,78 @@
         display: flex;
         justify-content: flex-start;
         align-items: center; 
-        // margin-left: calc(~'var(--margin) * 1%');
         transition: margin .5s ease-out;
     }
 
     &__element {
         flex: 0 0 100%;
-        padding: @space * 6 @space * 9;
+        padding: @space * 3 @space * 9;
         height: 100%;
+        padding-left: 50%;
+        .center(unset);
+        color: @color-bg-1;
+
+        &--slide-1 {
+            background: @color-bg-2 url(../../img/slide1.png) @shift /contain no-repeat;
+        }
+        &--slide-2 {
+            background: @color-bg-2 url(../../img/slide2.png) @shift /contain no-repeat;
+        }
+        &--slide-3 {
+            background: @color-bg-2 url(../../img/slide3.png) @shift /contain no-repeat;
+        }
+        &--slide-4 {
+            background: @color-bg-2 url(../../img/slide4.png) @shift /contain no-repeat;
+        }
+        &--slide-5 {
+            background: @color-bg-2 url(../../img/slide5.png) @shift /contain no-repeat;
+        }
+
+        .mixin-max-media(@br-mobile); 
+        .rwd {
+            text-align: center;
+            padding-left: @space * 9;
+            background-position-x: center;
+        }  
+
+        &__cont {
+            width: 100%;
+        }
+
+        &__title {
+            font-size: @body-font-size * 0.8333;
+            padding-bottom: @space;
+            margin: 0 0 @space * 2 0;
+            position: relative;
+            display: inline-block;
+            font-family: @font-1;
+
+            &::after {
+                .position-absolute(unset, unset, 0, 50%);
+                content: "";
+                display: block;
+                border-bottom: 1px solid @color-bg-1;
+                width: @space * 2;
+                transform: translateX(-50%);
+            }
+        }
+
+        &__main-title {
+            line-height: 1.1;
+            margin: 0;
+            font-family: @font-3;
+        }
+
+        &__text {
+            padding: @space * 3 0 @space * 4 @space;
+            margin: 0;
+            font-family: @font-1;
+        }
+
+        &__btn {
+            font-family: @font-3;
+            text-transform: uppercase;
+        }
     }
 }
 
@@ -57,7 +121,7 @@
         font-family: "Material Icons"; 
         content: "arrow_right_alt";
         transform: rotate(180deg);
-        .flex();
+        .center();
         position: absolute;
         left:0;
         top:0;
@@ -73,8 +137,6 @@
         transform: rotate(0deg);
     }
 }
-
-
 
 .slider-dots {
     z-index: 2;

@@ -59,7 +59,7 @@ const slider = (() => {
                 this.sliderCont.style.marginLeft = `${firstMargin + shiftX}%`;
             });
             this.sliderCont.addEventListener('touchend', (event) => {
-                if (shortTouch && this.distanceSwiped(shiftX, 20)) {
+                if (shortTouch && this.distanceSwiped(shiftX, 10)) {
                     this.changeToIndex(firstMargin + this.distanceSwiped(shiftX));
                 } else {
                     this.changeToIndex(firstMargin);
@@ -178,7 +178,7 @@ const slider = (() => {
 
     const slideElement = document.getElementsByClassName('slider__element')
     const idSlider = document.getElementById('slider')
-    const sliderOne = new Slider(idSlider, 3000)
+    const sliderOne = new Slider(idSlider, 4000)
 })();
 
 export default slider;
